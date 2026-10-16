@@ -1,0 +1,7 @@
+node_modules/
+data/
+vault/
+pnpm-lock.yaml
+research_notes/
+reports/
+.claude/

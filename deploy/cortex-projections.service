@@ -1,0 +1,17 @@
+[Unit]
+Description=Cortex weekly projections
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/path/to/cortex
+# claude and uv live in ~/.local/bin, which a user unit's PATH does not include.
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin
+ExecStart=/usr/bin/node src/main.ts projections
+StandardOutput=append:/path/to/cortex/data/run.log
+StandardError=append:/path/to/cortex/data/run.log
+TimeoutStartSec=4h
+Nice=10
+# Runs whether the run succeeded or not.
+ExecStopPost=/path/to/cortex/deploy/commit-vault.sh projections

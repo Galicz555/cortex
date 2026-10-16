@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Cortex projections once a week
+
+[Timer]
+# Sunday, after the daily run has folded in the week's last news.
+OnCalendar=Sun *-*-* 07:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

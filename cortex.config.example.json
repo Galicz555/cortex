@@ -1,0 +1,21 @@
+{
+  "projects": [
+    { "name": "notes-app", "path": "../notes-app" },
+    {
+      "name": "voice-agent",
+      "path": "../voice-agent",
+      "extraFiles": ["../notes/voice-agent.md"]
+    }
+  ],
+  "toolEnv": {
+    "HF_HOME": "/var/cache/huggingface"
+  },
+  "sources": [
+    {
+      "id": "example-spec",
+      "title": "Example API spec (commits)",
+      "repo": "example-org/api-spec",
+      "branch": "main"
+    }
+  ]
+}

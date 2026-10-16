@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Cortex once a day
+
+[Timer]
+OnCalendar=*-*-* 04:30
+# A day the machine was off runs at next boot instead of being skipped.
+Persistent=true
+RandomizedDelaySec=15min
+
+[Install]
+WantedBy=timers.target
