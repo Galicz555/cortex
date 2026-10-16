@@ -16,6 +16,7 @@ pnpm compare opus-3 opus-5.5 [api|claude-code]  # render vault/compare/<from>--<
 pnpm seed        # one-off: Opus writes starting topic notes from training knowledge (lowest trust)
 pnpm check       # format → lint → types → tests; must be green before any commit
 uv run --script tools/test_page_text.py  # page_text.py's address guard, offline
+uv run --script tools/test_transcribe.py  # transcribe.py's piece size, model stubbed
 ```
 
 Node 26 runs the `.ts` files directly (type stripping): only erasable syntax. Relative imports
